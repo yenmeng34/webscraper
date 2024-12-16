@@ -45,7 +45,7 @@ except Exception as e:
     print(f"Error loading Excel file: {e}")
     exit()
 
-# Set up Chrome options
+# Set up Chrome options (Remove this part of the code to run with GUI)
 chrome_options = Options()
 chrome_options.add_argument("--headless")  # Enable headless mode
 chrome_options.add_argument("--disable-gpu")  # Disable GPU acceleration (recommended for headless mode)
@@ -99,6 +99,8 @@ def log_search_results(company_name, results_count, results_details):
             log_file.write("---------------------------------------------------\n")
             log_file.write(f"{results_details}\n")
             log_file.write("---------------------------------------------------\n")
+            
+            #Progession showcase
             if skip_criteria1 and skip_criteria2 in results_details:
                 print(f"    {company_name} Company's Nature of Business is Not Found on CTOS website...")
             else:
@@ -113,11 +115,11 @@ def log_search_results(company_name, results_count, results_details):
 # Initialize log file
 log_file_path = initialize_log_file()
 
-# Process batch of companies
+# Process batch of companies (CTOS website only allow 500 search per session)
 checkpoint = load_checkpoint()
 start_index = checkpoint["last_index"] + 1
 end_index = min(start_index + 500, len(df))
-
+#Check Completion Status
 if start_index >= len(df):
     print("All companies have been processed.")
     driver.quit()
@@ -171,11 +173,11 @@ save_checkpoint(end_index - 1)
 
 # Save results
 timestamp = datetime.now().strftime("%H%M%S_%d%m%y")
-output_file_path = rf"C:\Users\User\Desktop\Analytics\Output\Database_Updated_{timestamp}.xlsx"
+output_file_path = rf"C:\Users\User\Desktop\Analytics\Output\Database_Updated_{timestamp}.xlsx" #Save Excel File
 
 try:
     df.to_excel(output_file_path, sheet_name=sheet_name, index=False)
-    print(f"Results saved to {output_file_path}")
+    print(f"Results saved to {output_file_path}") 
 except Exception as e:
     print(f"Error saving results: {e}")
 
