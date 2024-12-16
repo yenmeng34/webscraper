@@ -30,12 +30,12 @@ Selenium WebDriver Installation
       - Place the downloaded WebDriver in a directory included in your system's PATH, or specify its location in your script. # Recommend download to C drive
       - Verify Installation: Test if the WebDriver works by running:
 
-        from selenium import webdriver
-
-        driver = webdriver.Chrome()  # or webdriver.Firefox()
-        driver.get("https://example.com")
-        print(driver.title)
-        driver.quit()
+        #from selenium import webdriver 
+ 
+        #driver = webdriver.Chrome()  # or webdriver.Firefox() 
+        #driver.get("https://example.com") 
+        #print(driver.title) 
+        #driver.quit() 
 
 
 
