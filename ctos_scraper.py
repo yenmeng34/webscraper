@@ -55,7 +55,7 @@ chrome_options.add_argument("--disable-dev-shm-usage")  # Overcome limited resou
 
 # Selenium WebDriver setup
 service = Service(driver_path)
-driver = webdriver.Chrome(service=service) #options=chrome_options)
+driver = webdriver.Chrome(service=service, options=chrome_options) #, options=chrome_options (Remove this part of the code to run with GUI)
 
 # Navigate to CTOS search page
 try:
