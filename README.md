@@ -15,6 +15,8 @@ Install the dependencies using:
     - pip install selenium
     - pip install pandas
 
+
+
 Additionally, you need to install a WebDriver for Selenium. Follow these steps below:
 Selenium WebDriver Installation
 
@@ -34,6 +36,8 @@ Selenium WebDriver Installation
     driver.get("https://example.com")
     print(driver.title)
     driver.quit()
+
+
 
 LIMITATION and USAGE
 1. This program is intended for personal use only. Please respect the terms and conditions of the websites you scrape.
