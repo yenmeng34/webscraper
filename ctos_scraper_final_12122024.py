@@ -13,6 +13,7 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from datetime import datetime
 
 counter = 0
+flag = False
 
 # File path and sheet details
 file_path = r"C:\Users\User\Desktop\Analytics\Database\Raw Data.xlsx"
