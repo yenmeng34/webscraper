@@ -23,19 +23,19 @@ Selenium WebDriver Installation
 1. Choose a Browser: Decide which browser you want to use for scraping (e.g., Chrome, Firefox).
 
 2. Download WebDriver:
-  - For Chrome: Download ChromeDriver
-  - For Firefox: Download GeckoDriver
+      - For Chrome: Download ChromeDriver
+      - For Firefox: Download GeckoDriver
 
 3. Install the WebDriver:
-  - Place the downloaded WebDriver in a directory included in your system's PATH, or specify its location in your script. # Recommend download to C drive
-  - Verify Installation: Test if the WebDriver works by running:
+      - Place the downloaded WebDriver in a directory included in your system's PATH, or specify its location in your script. # Recommend download to C drive
+      - Verify Installation: Test if the WebDriver works by running:
 
-    from selenium import webdriver
+        from selenium import webdriver
 
-    driver = webdriver.Chrome()  # or webdriver.Firefox()
-    driver.get("https://example.com")
-    print(driver.title)
-    driver.quit()
+        driver = webdriver.Chrome()  # or webdriver.Firefox()
+        driver.get("https://example.com")
+        print(driver.title)
+        driver.quit()
 
 
 
